@@ -1,0 +1,31 @@
+{
+  "html": [
+    {
+      "type": "main",
+      "children": [
+        {
+          "type": "article",
+          "id": "sliderContainer",
+          "children": [
+            {
+              "type": "button",
+              "innerText": "Previous",
+              "id": "sliderPrevBtn",
+              "class": ["sliderBtn"]
+            },
+            { "type": "section", "id": "sliderImageContainer" },
+            {
+              "type": "button",
+              "innerText": "Next",
+              "id": "sliderNextBtn",
+              "class": ["sliderBtn"]
+            },
+            {
+              "type": "section", "id": "sliderDotContainer"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
