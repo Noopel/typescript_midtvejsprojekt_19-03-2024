@@ -8,6 +8,8 @@ class Slider {
   static autoSliderEnabled = true;
   static autoSlideDelay = 2;
 
+  static createPaginations = true;
+
   static assetImagePath = "../assets/img/";
 
   static containerError = "ERROR: No Container was found for Slider";
@@ -27,7 +29,7 @@ class Slider {
 
     sliderImageContainer ? null : console.error(Slider.imageContainerError);
 
-    imagePaths.forEach((img: string, i: number) => {
+    imagePaths.forEach((img: string) => {
       let sliderImg = new SliderImage(
         `.${sliderHeader}Image`,
         Slider.assetImagePath + img,
@@ -35,7 +37,7 @@ class Slider {
       );
       this.imgElements.push(sliderImg);
 
-      if (dotContainer) {
+      if (dotContainer && Slider.createPaginations) {
         let sliderDot = new SliderDot(sliderHeader, dotContainer);
         let index = this.dotElements.push(sliderDot) - 1;
 
